@@ -44,13 +44,28 @@ namespace Homework_Theme_04
             // Худшая прибыль в месяцах: 7, 4, 1, 5, 12
             // Месяцев с положительной прибылью: 10
 
-            Random random = new Random();         // создаю рандома для заполнения массивов
+            Random random = new Random();                     // создаю рандом для заполнения массивов
 
-            int[] income = new int[12];           // создаю массив прибыль
-            for (int i = 0; i < income.Length; i++)
+            int[] income = new int[12];                       // создаю массив прибыль
+            int[] expenses = new int[12];
+
+            for (int i = 0; i < income.Length; i++)           // цикл для заполнения массива доход
             {
                 income[i] = random.Next(1, 101) * 10_000;
-                Console.Write($"{income[i]}\n ");
+                expenses[i] = random.Next(1,100) * 10_000;
+                Console.Write($"{income[i]}    {expenses[i]}\n");
+
+            }
+
+          int[] [] z78 = new int [12][];
+            for (int i = 0;i < 2;i++)
+            {
+                for (int j = 0; j < 12; j++)
+                {
+                    z78 [i, j] = random.Next(1, 100) * 10_000;
+                    Console.Write($"{z78[i, j]}\n");
+                }
+               
             }
 
             Console.ReadKey();
