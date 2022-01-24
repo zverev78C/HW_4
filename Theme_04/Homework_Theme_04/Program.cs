@@ -49,14 +49,14 @@ namespace Homework_Theme_04
             int[] income = new int[13];                       // создаю массив прибыль
             int[] expenses = new int[13];
             int[] profit = new int[13];
-            Console.Write($"  мес.  приход    расход   прибыль\n");
+            Console.Write($"  мес.\t приход\t расход\t прибыль\n");
             for (int i = 1; i < income.Length; i++)           // цикл для заполнения массива доход
             {
                 income[i] = random.Next(1, 10) * 10_000;
                 expenses[i] = random.Next(1,10) * 10_000;
                 profit[i] = income[i] - expenses[i];
                 
-                Console.Write($"{i} мес.  {income[i]}    {expenses[i]}   {profit[i]}\n");
+                Console.Write($"{i} мес.\t{income[i]}\t{expenses[i]} \t{profit[i]}\n");
 
             }
 
