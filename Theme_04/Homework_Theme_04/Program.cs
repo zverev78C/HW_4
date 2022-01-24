@@ -47,16 +47,16 @@ namespace Homework_Theme_04
             Random random = new Random();                     // создаю рандом для заполнения массивов
 
             int[] income = new int[13];                       // создаю массив прибыль
-            int[] expenses = new int[13];
-            int[] profit = new int[13];
-            Console.Write($"  мес.\t приход\t расход\t прибыль\n");
-            for (int i = 1; i < income.Length; i++)           // цикл для заполнения массива доход
+            int[] expenses = new int[13];                       // массив расходы
+            int[] profit = new int[13];                         // массив прибыль
+            Console.Write($"  мес.\t приход\t расход\t прибыль\n");      //название столбиков массива
+            for (int i = 1; i < income.Length; i++)           // цикл для заполнения массивов
             {
-                income[i] = random.Next(1, 10) * 10_000;
-                expenses[i] = random.Next(1,10) * 10_000;
-                profit[i] = income[i] - expenses[i];
+                income[i] = random.Next(1, 10) * 10_000;        // заполнения массива доход
+                expenses[i] = random.Next(1,10) * 10_000;       // заполнение массива расходы
+                profit[i] = income[i] - expenses[i];           // высчитывание прибыли
                 
-                Console.Write($"{i} мес.\t{income[i]}\t{expenses[i]} \t{profit[i]}\n");
+                Console.Write($"{i} мес.\t{income[i]}\t{expenses[i]} \t{profit[i]}\n");         //выведение на экран результатов
 
             }
 
