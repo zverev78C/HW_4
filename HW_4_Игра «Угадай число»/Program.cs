@@ -33,6 +33,39 @@ namespace HW_4_Игра__Угадай_число_
             //Программа опрашивает пользователя и просит вводить числа.
             //Реализована возможность выхода из бесконечного цикла, когда пользователь устал.
             //Демонстрируется загаданный результат.
+
+            Console.WriteLine("Игра \"Угадай-ка\"");
+            
+
+            Random rand = new Random();
+            int MaxLimit;
+            Console.Write("Введите число максимального предела диапазона: ");
+            MaxLimit = int.Parse (Console.ReadLine());
+            int iiNumber = rand.Next(0, MaxLimit);
+            int count = 0;
+            int userNumber;
+
+            do
+            {
+                Console.Write("\nВведите число: ");
+                count++;
+                userNumber = Convert.ToInt32(Console.ReadLine());
+                if (userNumber < iiNumber)
+                {
+                    Console.WriteLine("Введенное число меньше загаданного. Попробуйте ещё раз");
+                }
+                else if (userNumber > iiNumber)
+                {
+                    Console.WriteLine("Введенное число больше загаданного. Попробуйте ещё раз");
+                }
+                else
+                {
+                    Console.WriteLine($"Поздравляю, число угадано! Число попыток: {count}.");
+                    Console.ReadKey();
+                    break;
+                }
+            }
+            while (true);
         }
     }
 }
