@@ -43,26 +43,36 @@ namespace HW_4_Игра__Угадай_число_
             MaxLimit = int.Parse (Console.ReadLine());
             int iiNumber = rand.Next(0, MaxLimit);
             int count = 0;
+            string num;
             int userNumber;
-
             do
             {
                 Console.Write("\nВведите число: ");
                 count++;
-                userNumber = Convert.ToInt32(Console.ReadLine());
-                if (userNumber < iiNumber)
+                num = Console.ReadLine();
+                bool res = int.TryParse(num, out userNumber);
+                if (res == true)
                 {
-                    Console.WriteLine("Введенное число меньше загаданного. Попробуйте ещё раз");
-                }
-                else if (userNumber > iiNumber)
-                {
-                    Console.WriteLine("Введенное число больше загаданного. Попробуйте ещё раз");
+                    if (userNumber < iiNumber)
+                    {
+                        Console.WriteLine("Введенное число меньше загаданного. Попробуйте ещё раз");
+                    }
+                    else if (userNumber > iiNumber)
+                    {
+                        Console.WriteLine("Введенное число больше загаданного. Попробуйте ещё раз");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Поздравляю, число угадано! Число попыток: {count}.");
+                        Console.ReadKey();
+                        break;
+                    }
                 }
                 else
                 {
-                    Console.WriteLine($"Поздравляю, число угадано! Число попыток: {count}.");
+                    Console.Write($"Загаданое число: {iiNumber}.");
                     Console.ReadKey();
-                    break;
+                    break;                   
                 }
             }
             while (true);
