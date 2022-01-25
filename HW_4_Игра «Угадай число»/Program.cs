@@ -37,40 +37,41 @@ namespace HW_4_Игра__Угадай_число_
             Console.WriteLine("Игра \"Угадай-ка\"");
             
 
-            Random rand = new Random();
-            int MaxLimit;
+            Random rand = new Random();                                                                         //рандом для задания игрового числа
+            int MaxLimit;                                                                                       // предел диапозона загадываемого числа
             Console.Write("Введите число максимального предела диапазона: ");
             MaxLimit = int.Parse (Console.ReadLine());
-            int iiNumber = rand.Next(0, MaxLimit);
-            int count = 0;
-            string num;
-            int userNumber;
+            int iiNumber = rand.Next(0, MaxLimit);                                                              // загадываемое число
+            // int count = 0;                                                                                   // счетчик попыток
+            string num;                                                                                         // вводимое пользователем переменная
+            int userNumber;                                                                                     // вводимое  пользователем число
+
             do
             {
-                Console.Write("\nВведите число: ");
-                count++;
+                Console.Write("\nВведите число: ");                                                             // приглашение для пользователя ввести число
+                //count++;
                 num = Console.ReadLine();
-                bool res = int.TryParse(num, out userNumber);
+                bool res = int.TryParse(num, out userNumber);                                                   // определение число ли введено пользователем
                 if (res == true)
                 {
-                    if (userNumber < iiNumber)
+                    if (userNumber < iiNumber)                                                                  // если число меньше
                     {
                         Console.WriteLine("Введенное число меньше загаданного. Попробуйте ещё раз");
                     }
                     else if (userNumber > iiNumber)
                     {
-                        Console.WriteLine("Введенное число больше загаданного. Попробуйте ещё раз");
+                        Console.WriteLine("Введенное число больше загаданного. Попробуйте ещё раз");            // если число больше
                     }
                     else
                     {
-                        Console.WriteLine($"Поздравляю, число угадано! Число попыток: {count}.");
+                        Console.WriteLine($"Поздравляю, число угадано! ");                                      // если число угадано
                         Console.ReadKey();
                         break;
                     }
                 }
                 else
                 {
-                    Console.Write($"Загаданое число: {iiNumber}.");
+                    Console.Write($"Загаданое число: {iiNumber}.");                                             // если пользователь ввел не число то игра закрывается
                     Console.ReadKey();
                     break;                   
                 }
