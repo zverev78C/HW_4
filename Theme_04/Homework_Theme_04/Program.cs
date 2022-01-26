@@ -59,7 +59,24 @@ namespace Homework_Theme_04
 
             }
 
-            Console.ReadKey();            
+            Console.ReadKey();
+
+
+            //for (int i = 0; i < 12; i++)
+            //{
+            //    //увеличиваем месяц на 1
+            //    month++;
+            //    //задаем доход
+            //    int income = r.Next(5, 20) * 10_000;
+            //    //задаем расход
+            //    int outgo = r.Next(5, 20) * 10_000;
+            //    //получаем прибыль
+            //    int profit = income - outgo;
+            //    //заносим прибыль в массив
+            //    profits[i] = profit;
+            //    //выводим строку в консоль
+            //    Console.WriteLine($"{month,6}  {income,16} { outgo,16} {profit,16}");
+            //}
         }
     }
 }

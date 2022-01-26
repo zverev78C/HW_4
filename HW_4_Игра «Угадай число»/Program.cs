@@ -69,12 +69,16 @@ namespace HW_4_Игра__Угадай_число_
                         break;
                     }
                 }
-                else
+                else //if (res == null)
                 {
                     Console.Write($"Загаданое число: {iiNumber}.");                                             // если пользователь ввел не число то игра закрывается
                     Console.ReadKey();
                     break;                   
                 }
+                //else
+                //{
+                //    Console.Write($"Необходимо ввести число.");
+                //}
             }
             while (true);
         }

@@ -35,6 +35,13 @@ namespace HW_4_2
             // 1       7      21      35      35       21      7       1
             // 
             // Справка: https://ru.wikipedia.org/wiki/Треугольник_Паскаля
+
+            Console.Write("Задайте число строк триугольника: ");
+            int N = int.Parse(Console.ReadLine());
+
+            // Н-строка; М место слева; М-н !!! Н/М*(Н-М)
+
+            Console.ReadKey();
         }
     }
 }
