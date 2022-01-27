@@ -64,17 +64,20 @@ namespace HW_4_2
                    
                 }
             }
+            //Console.SetCursorPosition((Console.WindowWidth / 2) - (tring[i].Length / 2), 6);
            
+
             for (int i = 0; i < tring.Length; i++)
             {
-                Console.SetCursorPosition((Console.WindowWidth / 2) - (tring[i].Length / 2), 6);
 
                 for (int j = 0; j < tring[i].Length; j++)
                 {
-                   
-                    Console.Write(" {0:D}", tring[i][j]);
+                    var str = string.Join(" {0:D} ", tring[i][j]);
+                    //Console.SetCursorPosition((Console.WindowWidth / 2) - (tring[i].Length / 2), 6);
+                    Console.Write(str);
+                    // Console.Write(" {0:D}", tring[i][j]);
                 }
-               
+
                 Console.WriteLine();
             }
 
