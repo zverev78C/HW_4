@@ -36,12 +36,53 @@ namespace HW_4_2
             // 
             // Справка: https://ru.wikipedia.org/wiki/Треугольник_Паскаля
 
-            Console.Write("Задайте число строк триугольника: ");
+            #region my 
+            Console.WriteLine("Программа построения треугольника паскаля в заданное количество строк.");
+            Console.Write("Задайте число строк треугольника: ");
             int N = int.Parse(Console.ReadLine());
 
-            // Н-строка; М место слева; М-н !!! Н/М*(Н-М)
+
+            int[][] tring = new int[N][];
+
+            tring[0] = new int[] { 1 }; // первая строка треугольника 1
+            //int left = 0;
+            // int center = Console.WindowWidth / 2;
+
+            for (int i = 1; i < tring.Length; i++)
+            {
+                tring[i] = new int[i + 1];
+                
+
+                for (int j = 0; j <= i; j++)
+                {
+                    if (j == 0 || j == i)
+                        tring[i][j] = 1;
+                    else
+                    {
+                        tring[i][j] = tring[i - 1][j - 1] + tring[i - 1][j];
+                    }
+                   
+                }
+            }
+           
+            for (int i = 0; i < tring.Length; i++)
+            {
+                Console.SetCursorPosition((Console.WindowWidth / 2) - (tring[i].Length / 2), 6);
+
+                for (int j = 0; j < tring[i].Length; j++)
+                {
+                   
+                    Console.Write(" {0:D}", tring[i][j]);
+                }
+               
+                Console.WriteLine();
+            }
 
             Console.ReadKey();
+            #endregion
+
+
+
         }
     }
 }
