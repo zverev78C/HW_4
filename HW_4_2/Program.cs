@@ -10,6 +10,7 @@ namespace HW_4_2
     {
         static void Main(string[] args)
         {
+            
 
             // Заказчику требуется приложение строящее первых N строк треугольника паскаля. N < 25
             // 
@@ -45,42 +46,35 @@ namespace HW_4_2
             int[][] tring = new int[N][];
 
             tring[0] = new int[] { 1 }; // первая строка треугольника 1
-            //int left = 0;
-            // int center = Console.WindowWidth / 2;
 
-            for (int i = 1; i < tring.Length; i++)
+
+            for (int row = 1; row < tring.Length; row++)
+                
             {
-                tring[i] = new int[i + 1];
+                tring[row] = new int[row + 1];
                 
 
-                for (int j = 0; j <= i; j++)
+                for (int col = 0; col <= row; col++)
                 {
-                    if (j == 0 || j == i)
-                        tring[i][j] = 1;
+                    if (col == 0 || col == row)
+                        tring[row][col] = 1;
                     else
                     {
-                        tring[i][j] = tring[i - 1][j - 1] + tring[i - 1][j];
+                        tring[row][col] = tring[row - 1][col - 1] + tring[row - 1][col];   // складывает две верхние ячейки для нахождения своего числа
                     }
                    
                 }
+               
             }
-            //Console.SetCursorPosition((Console.WindowWidth / 2) - (tring[i].Length / 2), 6);
-           
 
+           // Console.SetCursorPosition((Console.WindowWidth / 2) - (tring[i].Length / 2), 6);
             for (int i = 0; i < tring.Length; i++)
             {
-
-                for (int j = 0; j < tring[i].Length; j++)
-                {
-                    var str = string.Join(" {0:D} ", tring[i][j]);
-                    //Console.SetCursorPosition((Console.WindowWidth / 2) - (tring[i].Length / 2), 6);
-                    Console.Write(str);
-                    // Console.Write(" {0:D}", tring[i][j]);
-                }
-
-                Console.WriteLine();
+                for (int j = 0; j < tring[i].Length ; j++)
+                Console.Write(tring[i][j] + " ");
+                Console.WriteLine();                         // делит массивы на строчки при заполнении
             }
-
+           
             Console.ReadKey();
             #endregion
 
