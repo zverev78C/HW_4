@@ -41,20 +41,27 @@ namespace HW_4_2
             Console.WriteLine("Программа построения треугольника паскаля в заданное количество строк.");
             Console.Write("Задайте число строк треугольника: ");
             int N = int.Parse(Console.ReadLine());
-
+            //if (N == 0 || N > 25)
+            //{
+            //    Console.WriteLine("Число вне даипозона, попробуйте еще раз:");
+            //    N = int.Parse(Console.ReadLine());
+            //    else
+            //}
 
             int[][] tring = new int[N][];
 
             tring[0] = new int[] { 1 }; // первая строка треугольника 1
+            int row;
+            int col;
 
 
-            for (int row = 1; row < tring.Length; row++)
+            for (row = 1; row < tring.Length; row++)
                 
             {
                 tring[row] = new int[row + 1];
                 
 
-                for (int col = 0; col <= row; col++)
+                for (col = 0; col <= row; col++)
                 {
                     if (col == 0 || col == row)
                         tring[row][col] = 1;
@@ -62,16 +69,14 @@ namespace HW_4_2
                     {
                         tring[row][col] = tring[row - 1][col - 1] + tring[row - 1][col];   // складывает две верхние ячейки для нахождения своего числа
                     }
-                   
                 }
-               
             }
 
-           // Console.SetCursorPosition((Console.WindowWidth / 2) - (tring[i].Length / 2), 6);
-            for (int i = 0; i < tring.Length; i++)
+           //Console.SetCursorPosition((Console.WindowWidth / 2) - (tring[row].Length / 2), row);
+            for (row = 0; row < tring.Length; row++)
             {
-                for (int j = 0; j < tring[i].Length ; j++)
-                Console.Write(tring[i][j] + " ");
+                for (col = 0; col < tring[row].Length ; col++)
+                Console.Write(tring[row][col] + " ");
                 Console.WriteLine();                         // делит массивы на строчки при заполнении
             }
            
