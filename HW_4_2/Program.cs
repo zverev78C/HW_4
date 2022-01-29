@@ -44,17 +44,19 @@ namespace HW_4_2
 
 
             int[][] tring = new int[N][];
-
+            string[] massStr2 = new string[tring.Length];
             tring[0] = new int[] { 1 }; // первая строка треугольника 1
+            int row ;
+            int col ;
 
 
-            for (int row = 1; row < tring.Length; row++)
+            for (row = 1; row < tring.Length; row++)
                 
             {
                 tring[row] = new int[row + 1];
                 
 
-                for (int col = 0; col <= row; col++)
+                for (col = 0; col <= row; col++)
                 {
                     if (col == 0 || col == row)
                         tring[row][col] = 1;
@@ -62,19 +64,33 @@ namespace HW_4_2
                     {
                         tring[row][col] = tring[row - 1][col - 1] + tring[row - 1][col];   // складывает две верхние ячейки для нахождения своего числа
                     }
-                   
                 }
+                //massStr2[row] = tring[row].ToString();
+                //var massStr = Array.ConvertAll(tring[row], x => x.ToString());
+                //Console.SetCursorPosition((Console.WindowWidth / 2) - (tring [row].Length / 2), (Console.WindowHeight / 4) + row);
+                //Console.Write($"{massStr2[row]);
                
             }
-
-           // Console.SetCursorPosition((Console.WindowWidth / 2) - (tring[i].Length / 2), 6);
+            //Console.Write(Convert.ToString($"{ tring}"));
             for (int i = 0; i < tring.Length; i++)
             {
-                for (int j = 0; j < tring[i].Length ; j++)
-                Console.Write(tring[i][j] + " ");
-                Console.WriteLine();                         // делит массивы на строчки при заполнении
+               // Console.SetCursorPosition((Console.WindowWidth / 2) - (massStr2[i].Length / 2), (Console.WindowHeight / 4) + i);
+                Console.Write($"{massStr2[i]}  ");
+                Console.WriteLine(); // делит массивы на строчки при заполнении
+                //for (int j = 0; j < massStr2[i].Length; j++)
+                //{
+                //    Console.Write($"{massStr2[i][j]}  ");
+                //    Console.WriteLine(); // делит массивы на строчки при заполнении
+                //}
             }
-           
+
+
+            //for (int i = 0; i < tring.Length; i++)
+            //{
+
+            //}
+
+
             Console.ReadKey();
             #endregion
 
