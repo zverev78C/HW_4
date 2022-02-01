@@ -49,6 +49,8 @@ namespace HW_4_3._1
                 Console.WriteLine();
             }
             Console.WriteLine();
+
+
             Console.WriteLine("Итоговая матрица: ");
             for (int i = 0;i < col; i++)
             {
