@@ -43,7 +43,7 @@ namespace HW_4_3._3
             {
                 for (int j = 0; j < col; j++)
                 {
-                    matrix1[i,j] = random.Next(1,10);
+                    matrix1[i,j] = random.Next(1,10);   
                     Console.Write($"{matrix1[i,j]} ");
                 }
                 Console.WriteLine ();

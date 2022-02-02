@@ -9,11 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_4_1 прибыль", "Th
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_4_2 треугольник", "HW_4_2\HW_4_2 треугольник.csproj", "{29FA7C77-A3B5-454B-AA21-62BF07919D1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_4_3.1", "HW_4_3.1\HW_4_3.1.csproj", "{2F48F93B-A730-4254-BBA7-B7DFF96504B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_4_3.1 умножение на число", "HW_4_3.1\HW_4_3.1 умножение на число.csproj", "{2F48F93B-A730-4254-BBA7-B7DFF96504B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_4_3.2", "HW_4_3.2\HW_4_3.2.csproj", "{1CCBBC7A-2AAC-4527-BB67-E22F4B780CF7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_4_3.2 сложение вычитание", "HW_4_3.2\HW_4_3.2 сложение вычитание.csproj", "{1CCBBC7A-2AAC-4527-BB67-E22F4B780CF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_4_3.3", "HW_4_3.3\HW_4_3.3.csproj", "{A24238A5-8F57-4CAD-9A54-C9257330FCF0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_4_3.3 умножение", "HW_4_3.3\HW_4_3.3 умножение.csproj", "{A24238A5-8F57-4CAD-9A54-C9257330FCF0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_4_случайная матрица(!)", "HW_4_случайгая матрица\HW_4_случайная матрица(!).csproj", "{E40FAEF1-D44D-4BE4-B75C-9C20919C62A5}"
 EndProject

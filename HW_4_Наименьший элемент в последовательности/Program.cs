@@ -28,6 +28,28 @@ namespace HW_4_Наименьший_элемент_в_последователь
 
             //Что оценивается
             //Программа выводит на экран наименьшее число из последовательности пользователя.
+
+            Console.WriteLine("Введите длинну последовательности:");
+            int N = int.Parse(Console.ReadLine());
+            int[] array = new int[N];
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Clear();
+                Console.Write("Введите число: ");
+                array[i] = int.Parse(Console.ReadLine());
+            }
+
+            Console.Clear();
+            Console.WriteLine("Ваша последовательность:");
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write($"{array[i]}  ");
+            }
+
+            Console.ReadLine();
         }
+
     }
 }
