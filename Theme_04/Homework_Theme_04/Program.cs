@@ -48,21 +48,35 @@ namespace Homework_Theme_04
             int[] income = new int[13];                       // создаю массив прибыль
             int[] expenses = new int[13];                       // массив расходы
             int[] profit = new int[13];                         // массив прибыль
-            Console.Write($"  мес.\t приход\t расход\t прибыль\n");      //название столбиков массива
-            int profiton = 0;
-
+            Console.Write($"  месяц\t приход\t расход\t прибыль\n");      //название столбиков массива
+            int profiton = 0;                                             // счетчик лучшего месяца
+            int []low = new int[3];                                       // поиск меньшой прибыли
+            int tlow = int.MinValue;
 
             for (int i = 1; i < income.Length; i++)           // цикл для заполнения массивов
             {
                 income[i] = random.Next(1, 10) * 10_000;        // заполнения массива доход
                 expenses[i] = random.Next(1,10) * 10_000;       // заполнение массива расходы
                 profit[i] = income[i] - expenses[i];           // высчитывание прибыли
-                Console.Write($"{i} мес.\t{income[i]}\t{expenses[i]} \t{profit[i]}\n");         //выведение на экран результатов
+                Console.Write($"{i} мес.\t {income[i]}\t {expenses[i]} \t {profit[i]}\n");         //выведение на экран результатов
                 int temp = 0 < profit[i] ? profiton++: profit[i] ;                              // считаем положительную прибыль
+                //int templow = low > profit[i] ? low = i : low;
             }
 
+            for (int i = 1; i < profit.Length; i++)
+            {
+                if (tlow < profit[i])
+                {
+                    tlow = profit[i];
+                    low[i] = profit[i];
+                }
+
+            }
+
+
             Console.WriteLine();
-            Console.Write($"Количество месяцев с положительной прибылью : {profiton} мес.\t");  // выводим на экран количство месяцев с полоижительной прибылью
+            Console.Write($"Количество месяцев с положительной прибылью : {profiton} мес.\n");  // выводим на экран количство месяцев с полоижительной прибылью
+            Console.WriteLine($"Худшая прибыль в месяцах: {low} ");
             Console.ReadKey();
         }
     }
