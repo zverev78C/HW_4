@@ -30,27 +30,29 @@ namespace HW_4_Наименьший_элемент_в_последователь
             //Программа выводит на экран наименьшее число из последовательности пользователя.
 
             Console.WriteLine("Введите длинну последовательности:");
-            int N = int.Parse(Console.ReadLine());
-            int[] array = new int[N];
-            int min = int.MaxValue;
+            int N = int.Parse(Console.ReadLine());//задание длины массива
+            int[] array = new int[N]; // сщздание одномерного массива длиной N
+            int min = int.MaxValue;   // создание переменной для поиска минимального значения
 
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < array.Length; i++)  // цикл для опроса пользователя с целью заполнения массива
             {
-                Console.Clear();
+                Console.Clear(); // очистка экрана после нажатия enter 
                 Console.Write("Введите число: ");
                 array[i] = int.Parse(Console.ReadLine());
             }
 
-            Console.Clear();
+            Console.Clear(); // очистка экрана перед выводом последовательности пользователя и минимального значения
             Console.WriteLine("Ваша последовательность:");
 
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < array.Length; i++) // цикл для вывода последовательности на экран
             {
-                Console.Write($"{array[i]}  ");
-                int zic = min > array[i] ? min = array[i] : zic = min;
+                Console.Write($"{array[i]}  "); // вывод на экран заданой последовательности
+               int zic = min > array[i] ? min = array[i] : min ; // посик минимального значения
             }
+            //Array.Sort(array);
+
             Console.WriteLine();
-            Console.WriteLine($"Mинимальное чиcло = { min }");
+            Console.WriteLine($"Mинимальное чиcло = { min }"); // вывод минимального значения
             Console.ReadLine();
         }
 

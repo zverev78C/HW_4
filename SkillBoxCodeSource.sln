@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.32002.185
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Theme_04", "Theme_04", "{D464BDBD-52DB-4931-A55E-2953CDC219E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_4_1 прибыль", "Theme_04\Homework_Theme_04\HW_4_1 прибыль.csproj", "{F1FA1384-19C3-43B5-8900-E45234AFF3EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_4_1 прибыль(!)", "Theme_04\Homework_Theme_04\HW_4_1 прибыль(!).csproj", "{F1FA1384-19C3-43B5-8900-E45234AFF3EE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_4_2 треугольник", "HW_4_2\HW_4_2 треугольник.csproj", "{29FA7C77-A3B5-454B-AA21-62BF07919D1D}"
 EndProject
