@@ -32,6 +32,7 @@ namespace HW_4_Наименьший_элемент_в_последователь
             Console.WriteLine("Введите длинну последовательности:");
             int N = int.Parse(Console.ReadLine());
             int[] array = new int[N];
+            int min = int.MaxValue;
 
             for (int i = 0; i < array.Length; i++)
             {
@@ -46,8 +47,10 @@ namespace HW_4_Наименьший_элемент_в_последователь
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write($"{array[i]}  ");
+                int zic = min > array[i] ? min = array[i] : zic = min;
             }
-
+            Console.WriteLine();
+            Console.WriteLine($"Mинимальное чиcло = { min }");
             Console.ReadLine();
         }
 
