@@ -49,6 +49,9 @@ namespace Homework_Theme_04
             int[] expenses = new int[13];                       // массив расходы
             int[] profit = new int[13];                         // массив прибыль
             Console.Write($"  мес.\t приход\t расход\t прибыль\n");      //название столбиков массива
+            int max = int.MinValue;
+            int maxNumb = 0;
+
             for (int i = 1; i < income.Length; i++)           // цикл для заполнения массивов
             {
                 income[i] = random.Next(1, 10) * 10_000;        // заполнения массива доход
@@ -56,9 +59,13 @@ namespace Homework_Theme_04
                 profit[i] = income[i] - expenses[i];           // высчитывание прибыли
                 
                 Console.Write($"{i} мес.\t{income[i]}\t{expenses[i]} \t{profit[i]}\n");         //выведение на экран результатов
-
+                int temp2 = max < profit[i] ? maxNumb = i : profit[i];
+                int temp = max < profit[i] ? max = profit[i]: profit[i] ;
+              
             }
 
+            Console.WriteLine();
+            Console.Write($"Лучший месяц: {maxNumb} мес.\t");
             Console.ReadKey();
 
 
