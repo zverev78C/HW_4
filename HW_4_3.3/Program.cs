@@ -27,6 +27,48 @@ namespace HW_4_3._3
             //  |  1  2  3  | х | 5 | = | 32 |
             //                  | 6 |  
             //
+
+            Console.WriteLine("Приложение для перемножения матриц.\n");
+            Console.Write("Введите количство строк в матрице: ");
+            int row = int.Parse(Console.ReadLine());
+            Console.Write("Введите количество столбцов матрицы: ");
+            int col= int.Parse(Console.ReadLine());
+            Random random = new Random();
+            double [,] matrix1 = new double[row,col];
+            double [,] matrix2 = new double[row, col];
+            double[,] matrix3 = new double[row, col];
+
+            Console.WriteLine("матрица №1:");
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < col; j++)
+                {
+                    matrix1[i,j] = random.Next(1,10);
+                    Console.Write($"{matrix1[i,j]} ");
+                }
+                Console.WriteLine ();
+            }
+
+            Console.WriteLine("матрица №2:");
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < col; j++)
+                {
+                    matrix2[i, j] = random.Next(1, 10);
+                    Console.Write($"{matrix2[i, j]} ");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("Итоговая матрица:");
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < col; j++)
+                {
+                    matrix3[i, j] = random.Next(1, 10);
+                    Console.Write($"{matrix3[i, j]} ");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
