@@ -50,9 +50,9 @@ namespace HW_4_3._1
 
 
             Console.WriteLine("Итоговая матрица: ");
-            for (int i = 0; i < col; i++)
+            for (int i = 0; i < row; i++)
             {
-                for (int j = 0; j < row; j++)
+                for (int j = 0; j < col; j++)
                 {
                     matrix[i, j] = matrix[i, j] * factor;
                     Console.Write($"{matrix[i, j]}\t");
