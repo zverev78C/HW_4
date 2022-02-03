@@ -27,6 +27,30 @@ namespace HW_4_3._2
             //  |  1  3  5  |   |  1  3  4  |   |  0   0   1  |
             //  |  4  5  7  | - |  2  5  6  | = |  2   0   1  |
             //  |  5  3  1  |   |  3  6  7  |   |  2  -3  -6  |
+
+
+
+
+            Console.Write("Введите количство строк матрицы: ");
+            int row = int.Parse(Console.ReadLine());
+            Console.Write("Введите количество столбцов матрицы: ");
+            int col = int.Parse(Console.ReadLine());
+            int[,] matrix1 = new int[row, col];
+            int[,] matrix2 = new int[col, row];
+
+            Random random = new Random();
+
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < col; j++)
+                {
+                    matrix1[i, j] = random.Next(1, 50);
+                    matrix2[i, j] = random.Next(1, 50);
+                }
+            }
+
+
+            Console.ReadKey();
         }
     }
 }

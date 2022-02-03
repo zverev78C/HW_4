@@ -30,16 +30,14 @@ namespace HW_4_случайгая_матрица
             //Программа выводит на экран случайно созданную матрицу предварительно заданного размера, а также сумму всех элементов в ней.
 
 
-            int row = 1;
-            int column = 1;
+            int row ;
+            int column ;
             int sum = 0;
             Random random = new Random();
-
             Console.Write("Введите количество строк: ");
             row = int.Parse(Console.ReadLine());
             Console.Write("Введите количество столбцов: ");
             column = int.Parse(Console.ReadLine());
-
             int[,] matrix = new int[row, column];
 
             for (int i = 0; i < row; i++)
@@ -53,7 +51,6 @@ namespace HW_4_случайгая_матрица
                 Console.WriteLine();
             }
             Console.Write($"Сумма равна: {sum}");
-
             Console.ReadKey();
         }
     }
