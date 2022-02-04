@@ -39,6 +39,7 @@ namespace HW_4_3._2
             //Console.Write($"{ action}\n");
             int[,] matrix1 = new int[row, col];
             int[,] matrix2 = new int[row, col];
+            int[,] matrix3 = new int[row,col];
 
             Random random = new Random();
             Console.WriteLine("Мытрица №1:  ");
@@ -58,38 +59,53 @@ namespace HW_4_3._2
             {
                 for (int j = 0; j < col; j++)
                 {
-                    //matrix1[i, j] = random.Next(1, 50);
                     matrix2[i, j] = random.Next(1, 50);
-                    //Console.Write($"{matrix1[i, j],5}");
                     Console.Write ($"{matrix2[i, j],5}");
                 }
                 Console.WriteLine();
             }
-            Console.Write("Что необходимо сделать?\n Сложение матриц: 1 \n вычитание матриц: 2 \n");
-            int action = int.TryParse (Console.ReadLine());
+           
+            int action ;
+            string num;
 
-              switch (action)
-              {
-                    case 1: // сложение
-                        for (int i = 0; i < row; i++)
+            do
+            {
+                Console.Write("Что необходимо сделать?\n Сложение матриц: 1 \n вычитание матриц: 2 \n");
+                num = Console.ReadLine ();
+                bool res = int.TryParse (num, out action);
+               if (action == 1)
+                {
+                    for (int i = 0; i < row; i++)
+                    {
+                        for (int j = 0; j < col; j++)
                         {
-                            for (int j = 0; j < col; j++)
-                            {
-
-                            }
+                            matrix3 [i, j] = matrix1[i,j] + matrix2 [i,j];
+                            Console.Write($"{matrix3[i,j],5}");
                         }
-                        break;
-                    case 2: // вычитание
-                        for (int i = 0; i < row; i++)
+                        Console.WriteLine();
+                    }
+                    break;
+                }
+                else if (action == 2)
+                {
+                    for (int i = 0; i < row; i++)
+                    {
+                        for (int j = 0; j < col; j++)
                         {
-                            for (int j = 0; j < col; j++)
-                            {
-
-                            }
+                            matrix3[i, j] = matrix1[i, j] - matrix2[i, j];
+                            Console.Write($"{matrix3[i, j],5}");
                         }
-                        break;
-              }
-            
+                        Console.WriteLine();
+                    }
+                    break;
+                }
+                else
+                {
+                    Console.Write("Введите 1 или 2.");
+                }
+            }
+            while(true);
+             
             Console.ReadKey();
         }
     }
